@@ -15,7 +15,8 @@ body{
     width: 100%;
     height: 100%;
     background-color: rgba(126, 16, 16, 0.219);
-    background-image: url(BG.jpg);
+ 
+    background-image: linear-gradient(to right bottom, #e6d54f, #afc24e, #7dad50, #519553, #297d53);
     filter: blur(4px);
     background-size: cover;
     background-repeat: no-repeat;
