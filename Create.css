@@ -1,6 +1,6 @@
 body {
-  background-color: #151320;
-  font-family: 'Fredoka One', cursive;
+  background-image: linear-gradient(to right bottom, #e6d54f, #afc24e, #7dad50, #519553, #297d53);
+  font-family: "Nunito", sans-serif;
   color:white;
 }
 .social-login img {
@@ -16,8 +16,8 @@ a {
   margin-right: auto;
   margin-top: 3em;
   margin-bottom:3em;
-  border-radius: 10px;
-  background-color: #2f3136 ;
+  border-radius: 30px;
+  background-color: #2f3136d3 ;
   background-clip: padding-box;
   border: 2px solid white;
   padding: 1.8rem;

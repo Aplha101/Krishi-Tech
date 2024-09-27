@@ -1,107 +1,162 @@
-*{
-  margin: 0px;
-  padding: 0px;
-}
-html, body{
-  font-family: "Lato", sans-serif;
-}
-.row{
-  margin-left: 0px;
-  margin-right: 0px;
-}
-.global{
-  padding: 50px;
-  color: #f0f9ff;
-  margin-top: 80px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.9;
-}
-.global .curve{
-  position: absolute;
-  top: 17%;
-  background: #000;
-  opacity: 0.2;
-  width: 90%;
-  height: 38%;
-  border-top-right-radius: 100px;
-  border-bottom-left-radius: 100px;
-}
-.global h6{
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.global ul{
-  list-style-type: none;
-  line-height: 30px;
-  font-size: 15px;
-  margin-bottom: 0;
-}
-.global ul a{
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.global ul a:hover{
-  opacity: 0.8;
-  color: #eee;
-}
-.global .social{
+footer{
+  position: relative;
   width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 40px;
-  padding-bottom: 0px;
-  border-top: 1px solid #eee;
-  margin-top: 50px;
+  height: auto;
+  padding: 50px 100px;
+  margin-top: 3rem;
+  background: #111;
+  display: flex;
+  font-family: sans-serif;
+  justify-content: space-between;
 }
-.global .social a{
-  font-size: 22px;
-  width: 45px;
-  height: 45px;
-  line-height: 39px;
-  display: inline-block;
-  border-radius: 50%;
-  border: 2px solid #05ff05;
-  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4);
-  margin: 10px;
+
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.footer-container .sec{
+  margin-right: 30px;
+}
+
+.footer-container .sec.aboutus{
+  width: 40%;
+}
+
+.footer-container h2{
+  position: relative;
   color: #fff;
-  opacity: 0.7;
-  transition: 0.3s ease-in-out;
-}
-.global .social a:hover{
-  opacity: 0.9;
-  box-shadow: 0px 1px 3px 2px rgba(255, 255, 255, 0.9);
-}
-.global .copyright{
-  text-align: center;
-  padding-top: 24px;
-  font-weight: 500;
-  opacity: 0.8;
-  font-size: 16px;
-}
-@media (max-width: 767px) {
-
-    .global .curve{
-      left: 5%;
-      height: 70%;
-    }
-    .global h6{
-      margin: 0 auto;
-      text-align: center;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-    .global ul{
-      text-align: center;
-    }
-    .social{
-      margin: 0 auto;
-    }
+  margin-bottom: 15px;
 }
 
+.footer-container h2::before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: rgb(77, 228, 255);
+}
+
+footer p{
+  color: #fff;
+}
+
+.sci{
+  margin: 20px;
+  display: flex;
+}
+
+.sci li{
+  list-style: none;
+}
+
+.sci li a{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: .5s;
+}
+
+.sci li a:hover{
+  background: rgb(77, 228, 255);
+}
+
+.sci i a .bx{
+  color: #fff;
+  font-size: 20px;
+}
+
+.quicklinks{
+  position: relative;
+  width: 25%;
+}
+
+.quicklinks ul li{
+  list-style: none;
+}
+
+.quicklinks ul li a{
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+  transition: .3s;
+}
+
+.quicklinks ul li a:hover{
+  color: #fff;
+}
+
+.footer-container .contactBx{
+  width: calc(35% - 60px);
+  margin-right: 0 !important;
+}
+
+.contactBx .info{
+  position: relative;
+}
+
+.contactBx .info li{
+  display: flex !important;
+  margin-bottom: 16px;
+}
+
+.contactBx .info li span:nth-child(1){
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.contactBx .info li span{
+  color: #999;
+}
+
+.contactBx .info li a{
+  color: #999;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.contactBx .info li a:hover{
+  color: #fff;
+}
+
+/* Footer Media Query */
+@media (max-width: 991px){
+  footer{
+      padding: 40px;
+      font-size: 20px;
+  }
+
+  footer .footer-container{
+      flex-direction: column;
+  }
+
+  footer .footer-container .sec{
+      margin-right: 0;
+      margin-bottom: 40px;
+  }
+
+  footer .footer-container .sec.aboutus{
+      width: 100% !important;
+  }
+
+  footer .footer-container .quicklinks{
+      width: 100%;
+  }
+
+  footer .footer-container .contactBx{
+      width: 100%;
+  }
+}

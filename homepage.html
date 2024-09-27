@@ -1,247 +1,231 @@
 <!DOCTYPE html>
-<!-- The document type declaration defines the document to be HTML5 -->
 <html lang="en">
-  <!-- The language attribute specifies the language of the document -->
-  <head>
-    <!-- The head element contains meta-information about the document -->
-    <meta charset="UTF-8" />
-    <!-- The charset attribute specifies the character encoding for the HTML document -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- The viewport meta tag ensures the website is responsive on all devices -->
-    <title>Document</title>
-    <!-- The title element specifies the title of the document, shown in the browser's title bar or tab -->
-    <link
-      rel="shortcut icon"
-      href="https://sidcupfamilygolf.com/wp-content/themes/puttosaurus/favicons/favicon-32x32.png"
-      type="image/x-icon"
-    />
-    <!-- The link element with rel="shortcut icon" specifies the icon for the webpage -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
-     
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-  crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="Footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<body>
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Logo on the left -->
+            <a class="navbar-brand" href="#">
+                <img src="logo small.jpeg"
+                    alt="company Logo"  width="40" height="40" class="d-inline-block align-text-center">
+                    Krishi Tech
+            </a>
 
+            <!-- Toggler for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+            <!-- Navigation items in the middle -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="...">Home</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    
+                    <li class="nav-item"></li>
+                    <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" onclick="out(logged)">Log-out</a>
+                    </li>
+                </ul>
+            </div>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <!-- The link element with rel="stylesheet" specifies an external CSS file for styling -->
-    <link rel="stylesheet" href="homepage.css" />
-    <!-- This link element includes a local CSS file for additional styling -->
-  </head>
+            <!-- Profile icon on the right -->
+            <div class="navbar-nav">
+                <a  class="nav-link" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
+                    <span id="showid"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
 
-  <body>
-    <!-- The body element contains the content of the HTML document -->
-    <div id="nav">
-      <!-- The div element with id="nav" represents the navigation bar -->
-      <img
-        src="https:/ /eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg"
-        alt="logo"
-      />
-      <!-- The img element displays an image, with the src attribute specifying the image URL -->
-      <!-- The h4 element represents a heading -->
-      <a href="stock.html"><h4>Stocks</h4></a>
-      <a href="t.html"><h4>TRANSACTION</h4></a>
-      <h4>UPDATES</h4>
-      <a href="about.html"><h4>TEAMS</h4></a>    
-      
-      <button class="btn btn-danger" onclick="out(logged)" style="height:50px;">Log-out</button>  
-    </div>
-    <div id="cursor"></div>
-    <!-- The div element with id="cursor" represents a custom cursor -->
-    <div id="cursor-blur"></div>
-    <!-- The div element with id="cursor-blur" represents a blurred cursor effect -->
+    <div class="wrap"  id="home">
+        <div class="user">
+            <div class="usertext">
+                <h3 id="usershow"></h3>
+            </div>
+        </div>
+        <div class="imgdiv">
+            <div class="holder">
+                <div class="imgcont">
+                    <h1>Welcome to Krishi Tech</h1>
+                    <p>Unbeatable Organic and Agriculture Services</p>
+                </div>
+            </div>
 
-    <video
-      autoplay
-      loop
-      muted
-      src="trade.mp4"
-    ></video>
-    <!-- The video element embeds a video, with autoplay, loop, and muted attributes -->
-  
-    <div id="main">
-      <!-- The div element with id="main" contains the main content of the page -->
-      <div id="page1">
-        <!-- The div element with id="page1" represents the first page section -->
-        <h1>BUY. WAIT. SELL.</h1>
-        <!-- The h1 element represents the main heading -->
-        <h2 id="usershow"></h2>
-        <!-- The h2 element represents a subheading -->
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic omnis qui eveniet, accusamus quas mollitia? Perspiciatis atque expedita commodi ratione, incidunt cumque blanditiis?
-        </p>
-        <!-- The p element represents a paragraph of text -->
-        <div id="arrow">
-          <i class="ri-arrow-down-line"></i>
-          <!-- The i element with a class represents an icon -->
         </div>
-      </div>
-      <div id="page2">
-        <!-- The div element with id="page2" represents the second page section -->
-        <div id="scroller">
-          <!-- The div element with id="scroller" represents a scrolling container -->
-          <div id="scroller-in">
-            <a href="stock.html"></a><h4>STOCKS</h4>
-            <a href="t.html"><h4>TRANSACTION</h4></a>
-            <a href="graph.html"><h4>UPDATES</h4></a>
-            
-          </div>
-          <div id="scroller-in">
-            <a href="stock.html"></a><h4>STOCKS</h4>
-            <a href="t.html"><h4>TRANSACTION</h4></a>
-            <a href="graph.html"><h4>UPDATES</h4></a>
-          </div>
+        <div class="main">
+            <header>
+                <div class="wrapper wrapper--narrow">
+                    <h1>Krishi Tech<br> <span>BY    ,   CF-12</span></h1>
+                    <p>Kisano ki shakti , Krishi ki samriddhi</p>
+                </div>
+            </header>
+            <main id="services">
+                <div class="wrapper">
+                    <div class="grid">
+                        <div class="col">
+                            <div class="card one">
+                                <h2>HEAD</h2>
+                                <p>text</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card two">
+                                <h2>HEAD</h2>
+                                <p>text</p>
+                            </div>
+                            <div class="card three">
+                                <h2>HEAD</h2>
+                                <p>text</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card four">
+                                <h2>HEAD</h2>
+                                <p>text</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
-        <div id="about-us">
-          <!-- The div element with id="about-us" represents the about us section -->
-          <img
-            src="https://eiwgew2 7fhz.exactdn.com/wp-content/uploads/2023/02/home-about-1-300x200.jpg?strip=all&lossy=1&sharp=1&ssl=1"
-            alt="img"
-          />
-          <div id="about-us-in">
-            <h3>ABOUT US</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, perferendis hic esse doloremque incidunt nesciunt est sed praesentium aperiam quaerat! Dignissimos eveniet recusandae omnis? Neque similique sunt expedita, earum quasi optio iusto sapiente eligendi commodi iure non, aliquam, odit modi nemo!
-            </p>
-          </div>
-          <img
-            src="https://eiwgew27fhz .exactdn.com/wp-content/uploads/2023/02/home-about-2-300x200.jpg?strip=all&lossy=1&sharp=1&ssl=1"
-            alt="img"
-          />
+        <div class="number">
+            <div class=" count text-white py-5">
+                <div class="container">
+                 <div class="num row justify-content-center text-center">
+                  <div class="col-12">
+                   <h1 class=" countheader pb-3">Status</h1>
+                  </div>
+                  <div class="col-md-4 text-black">
+                    <h5>Farmers Benefitted</h5>
+                   <span id="count1" class="display-4"></span>
+                  </div>
+                  <div class="col-md-4 text-black">
+                    <h5>Schemes Launched</h5>
+                   <span id="count2" class="display-4"></span>
+                  </div>
+                  <div class="col-md-4 text-black">
+                    <h5>Funds Raised</h5>
+                   <span id="count3" class="display-4"></span><span>Mil</span>
+                  </div>
+                 </div>
+                </div>
+            </div>
         </div>
-        
-        <div id="green-div">
-          <img
-            src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg"
-            alt=""
-          />
-          <h4>
-            SIGN UP FOR OUR NEWS AND SPECIAL OFFERS STRAIGHT TO YOUR INBOX
-          </h4>
-          <img
-            src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg"
-            alt=""
-          />
-        </div>
-      </div>
-      <div id="page3">
-        <!-- The div element with id="page3" represents the third page section -->
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui eligendi vel delectus cumque. Optio ducimus, pariatur incidunt aliquam beatae tenetur consequatur, qui necessitatibus ab odit sunt aspernatur ratione, iusto quaerat modi! Assumenda magnam tempore repudiandae ratione exercitationem, maiores qui voluptates ipsa, consequatur iusto neque vero.
-        </p>
-        <img
-          id="colon1"
-          src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-left.svg"
-          alt=""
-        />
-        <img
-          id="colon2"
-          src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-right.svg"
-          alt=""
-        />
-      </div>
-      <div id="page4">
-        <!-- The div element with id="page4" represents the fourth page section -->
-        <h1>WHAT ARE YOU WAITING FOR?</h1>
-        <div class="elem">
-          <h2>UPDATES</h2>
-          <img
-            src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-toptracer-1024x683.jpg?strip=all&lossy=1&sharp=1&ssl=1"
-            alt=""
-          />
-        </div>
-        <div class="elem">
-          <h2>TRANSACTION</h2>
-          <img
-            src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-lessons-1024x683.jpg?strip=all&lossy=1&sharp=1&ssl=1"
-            alt=""
-          />
-        </div>
-        <div class="elem">
-          <H2>STOCKS</H2>
-          <img
-            src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-ag-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1"
-            alt=""
-          />
-        </div>
-      </div>
-      <div id="footer">
-        <!-- The div element with id="footer" represents the footer section -->
-        <img
-          src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg"
-          alt=""
-        />
-        <div id="f1">
-          <img
-            src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/log  o-white.svg"
-            alt="img"
-          />
-        </div>
-        <div id="f2">
-          <h3>STOCKS</h3>
-          <h3>TRADE</h3>
-          <h3>BUY & SELL</h3>
-        </div>
-        <div id="f3">
-          <h3>CONTACT US</h3>
-          <h3>TEAMS</h3>
-        </div>
-        <
-      </div>
     </div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
-      integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- The script element includes an external JavaScript file for GSAP library -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
-      integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- The script element includes an external JavaScript file for GSAP ScrollTrigger plugin -->
-    <script src="homepage.js"></script>
+</br></br></br></br></br>
+    <!--footer section-->
+    <footer>
+        <div class="footer-container">
+            <div class="sec aboutus">
+                <h2>Social & Support</h2>
+                <ul class="sci">
+                    <li><a href=""><i class="bx bxl-instagram"></i></a></li>
+                    <li><a href=""><i class="bx bxl-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><p><a href="mailto:@gmail.com">Contact Email</a></p></li>
+                </ul>
+            </div>
+            <div class="sec contactBx">
+                <h2>Govt Schemes</h2>
+                <ul class="info">
+                    <li><p><a href="https://pmkisan.gov.in/">PM-Kisan Samman Nidhi</a></p></li>
+                    <li>
+                        <p><a href="https://agriinfra.dac.gov.in/">Agriculture Infrastructure Fund</a></p>
+                    </li>
+                    <li><p><a href="https://agmarknet.gov.in/PriceAndArrivals/arrivals1.aspx">AGMARKNET</a></p></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
     <script>
-    let logged = false
-  let loggedin = () => {
-    if(!logged){
-      Swal.fire({
-              title: "Uh-oh!",
-              icon:"info",
-              text:"You're not logged in!",
-              confirmButtonText: "Log-In",
-            }).then((result) => {
-              if (result.isConfirmed) {
-                window.location.href = "log.html"
-              }
-            })
+        let logged = false
+      let loggedin = () => {
+        if(!logged){
+          Swal.fire({
+                  title: "Uh-oh!",
+                  icon:"info",
+                  text:"You're not logged in!",
+                  confirmButtonText: "Log-In",
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    window.location.href = "log.html"
+                  }
+                })
+        }
+      }
+    let out = (logged) =>{
+      if(logged){
+        localStorage.clear()
+        window.location.href = "log.html"
+      }else if(!logged){
+        loggedin()
+      }
     }
-  }
-let out = (logged) =>{
-  if(logged){
-    localStorage.clear()
-    window.location.href = "log.html"
-  }else if(!logged){
-    loggedin()
-  }
-}
-const username = localStorage.getItem("username")
-  if(username){
-    document.getElementById("usershow").textContent = `WELCOME TO CF-12 ${username}`
-    logged = true
-  }
-    </script>
-    <!-- The script element includes a local JavaScript file for additional functionality -->
-  </body>
+    const username = localStorage.getItem("username")
+      if(username){
+        document.getElementById("showid").textContent = `${username}`
+        logged = true
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+ function counter(id, start, end, duration) {
+  let obj = document.getElementById(id),
+   current = start,
+   range = end - start,
+   increment = end > start ? 1 : -1,
+   step = Math.abs(Math.floor(duration / range)),
+   timer = setInterval(() => {
+    current += increment;
+    obj.textContent = current;
+    if (current == end) {
+     clearInterval(timer);
+    }
+   }, step);
+ }
+ counter("count1",  0, 60000, 2000);
+ counter("count2", 100, 50, 2500);
+ counter("count3", 0, 40, 3000);
+});
+
+        </script>
+</body>
+
 </html>
